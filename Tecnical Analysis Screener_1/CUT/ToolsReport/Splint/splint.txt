@@ -1,0 +1,23 @@
+main.c: (in function main)
+main.c:16:3: Return value (type int) ignored: scanf("%d", &ch)
+  Result returned by function call is not used. If this is intended, can cast
+  result to (void) to eliminate message. (Use -retvalint to inhibit warning)
+
+display.c: (in function display)
+display.c:24:35: Possibly null storage fp passed as non-null param:
+                    fread (..., fp)
+  A possibly null pointer is passed as a parameter corresponding to a formal
+  parameter with no /*@null@*/ annotation.  If NULL may be used for this
+  parameter, add a /*@null@*/ annotation to the function parameter declaration.
+  (Use -nullpass to inhibit warning)
+   display.c:22:7: Storage fp may become null
+display.c:24:8: Test expression for while not boolean, type size_t:
+                   fread(&s1, sizeof(shares), 1, fp)
+  Test expression type is not boolean or int. (Use -predboolint to inhibit
+  warning)
+display.c:29:2: Return value (type int) ignored: fclose(fp)
+  Result returned by function call is not used. If this is intended, can cast
+  result to (void) to eliminate message. (Use -retvalint to inhibit warning)
+display.c:18:6: Variable j declared but not used
+  A variable is declared but never used. Use /*@unused@*/ in front of
+  declaration to suppress message. (Use -varuse to inhibit warning)
